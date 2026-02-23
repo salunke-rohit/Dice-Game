@@ -1,7 +1,7 @@
 
 import styled from "styled-components"
 
-export default function StartGame () {
+export default function StartGame ({toggle}) {
     return (
         <Contaner>
             <div className="imgdiv">
@@ -10,7 +10,7 @@ export default function StartGame () {
             
             <div className="content">
                 <h1>DICE GAME</h1>
-                <Button>Play Now</Button>
+                <Button onClick={toggle}>Play Now</Button>
             </div>
         </Contaner>
     )
