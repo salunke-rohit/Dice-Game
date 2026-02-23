@@ -1,19 +1,25 @@
 import styled from "styled-components"
 import TotalScore from "./TotalScore"
+import NumberSelecter from "./NumberSelecter"
+
 export default function GamePlay () {
     return (
         <div>
-            <main>
-                <div>
+            <MainArea>
+                <div className="topSection">
                     <TotalScore/>
-
+                    <NumberSelecter/>
                 </div>
-            </main>
+            </MainArea>
         </div>
     )
 }
 
 const MainArea = styled.main `
-    max-width: 1280px;
-    height: 151px;
+padding-top: 70px;
+   .topSection {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+   }
 `
