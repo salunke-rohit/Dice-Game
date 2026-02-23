@@ -1,10 +1,11 @@
 import styled from "styled-components"
+import StartGame from "./components/StartGame"
 
 function App() {
 
   return (
     <>
-    <p>new react project</p>
+    <StartGame/>
     </>
   )
 }
