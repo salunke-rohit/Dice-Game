@@ -5,6 +5,7 @@ import RollDice from "./RollDice"
 import { useState } from "react"
 export default function GamePlay () {
     const [ selectNumber , setSelectNumber] = useState ();
+    const [currDice , setCurrDice ] = useState(1);
     return (
         <div>
             <MainArea>
@@ -13,7 +14,7 @@ export default function GamePlay () {
                     <NumberSelecter selectNumber={selectNumber} 
                             setSelectNumber={setSelectNumber}/>
                 </div>
-                <RollDice/>
+                <RollDice currDice={currDice} setCurrDice={setCurrDice} />
             </MainArea>
         </div>
     )

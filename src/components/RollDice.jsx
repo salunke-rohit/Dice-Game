@@ -1,9 +1,8 @@
 import { useState } from "react"
 import styled from "styled-components"
 
-export default function RollDice () {
+export default function RollDice ({currDice , setCurrDice}) {
 
-    const [currDice , setCurrDice ] = useState(1);
     
     const genrateNum = ()=>{
         return Math.floor(Math.random() * 6) + 1;
