@@ -1,18 +1,8 @@
 import { useState } from "react"
 import styled from "styled-components"
 
-export default function RollDice ({currDice , setCurrDice}) {
+export default function RollDice ({rollDice , currDice}) {
 
-    
-    const genrateNum = ()=>{
-        return Math.floor(Math.random() * 6) + 1;
-        
-    }
-
-    const rollDice = () =>{
-        const randomNumber = genrateNum();
-        setCurrDice(randomNumber);
-    }
     
     return (
         <DiceContaner>

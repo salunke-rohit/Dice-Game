@@ -2,17 +2,23 @@
 import { useState } from "react"
 import styled from "styled-components"
 
-export default function NumberSelecter ({selectNumber , setSelectNumber}) {
+export default function NumberSelecter ({ setError , error , selectNumber , setSelectNumber}) {
     let arr = [1,2,3,4,5,6]
     
     console.log(selectNumber);
+
+    const numberSelecterHandler =(val)=>{
+        setSelectNumber(val)
+        setError("")
+    }
     
     return (
         <NumberSelecterConaner>
+            <p className="err">{error}</p>
             <div className="flex">
                 {
                 arr.map((val , i )=> (
-                    <Box key={i} onClick={()=>setSelectNumber(val)}
+                    <Box key={i} onClick={()=>numberSelecterHandler(val)}
                     isSelect = {
                         val === selectNumber
                     }
@@ -38,6 +44,10 @@ const NumberSelecterConaner = styled.div `
         font-size: 24px;
         font-weight: 700px;
         font-family: "Poppins", sans-serif;
+    }
+
+    .err {
+        color: red;
     }
 `
 
