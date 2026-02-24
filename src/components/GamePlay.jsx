@@ -2,14 +2,16 @@ import styled from "styled-components"
 import TotalScore from "./TotalScore"
 import NumberSelecter from "./NumberSelecter"
 import RollDice from "./RollDice"
-
+import { useState } from "react"
 export default function GamePlay () {
+    const [ selectNumber , setSelectNumber] = useState ();
     return (
         <div>
             <MainArea>
                 <div className="topSection">
                     <TotalScore/>
-                    <NumberSelecter/>
+                    <NumberSelecter selectNumber={selectNumber} 
+                            setSelectNumber={setSelectNumber}/>
                 </div>
                 <RollDice/>
             </MainArea>

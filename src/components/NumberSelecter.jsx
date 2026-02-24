@@ -2,9 +2,9 @@
 import { useState } from "react"
 import styled from "styled-components"
 
-export default function NumberSelecter () {
+export default function NumberSelecter ({selectNumber , setSelectNumber}) {
     let arr = [1,2,3,4,5,6]
-    const [ selectNumber , setSelectNumber] = useState ();
+    
     console.log(selectNumber);
     
     return (
