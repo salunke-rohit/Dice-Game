@@ -3,17 +3,22 @@ import styled from "styled-components"
 
 export default function RollDice () {
 
-    const [currDice , setCurrDice ] = useState();
+    const [currDice , setCurrDice ] = useState(1);
     
-    let genrateNum = ()=>{
-        let num = Math.floor(Math.random() * 7);
-        console.log(num);
+    const genrateNum = ()=>{
+        return Math.floor(Math.random() * 6) + 1;
+        
+    }
+
+    const rollDice = () =>{
+        const randomNumber = genrateNum();
+        setCurrDice(randomNumber);
     }
     
     return (
         <DiceContaner>
-            <div className="dice" onClick={genrateNum}>
-                <img src="public\cube1.png" alt="dice1" />
+            <div className="dice" onClick={rollDice}>
+                <img src={`dice_${currDice}.png`} alt="dice" />
             </div>
             <p>Click on Dice to roll</p>
         </DiceContaner>
