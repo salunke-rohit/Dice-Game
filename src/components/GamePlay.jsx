@@ -1,6 +1,7 @@
 import styled from "styled-components"
 import TotalScore from "./TotalScore"
 import NumberSelecter from "./NumberSelecter"
+import RollDice from "./RollDice"
 
 export default function GamePlay () {
     return (
@@ -10,6 +11,7 @@ export default function GamePlay () {
                     <TotalScore/>
                     <NumberSelecter/>
                 </div>
+                <RollDice/>
             </MainArea>
         </div>
     )
@@ -21,5 +23,6 @@ padding-top: 70px;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    
    }
 `
